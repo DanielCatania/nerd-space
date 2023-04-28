@@ -17,6 +17,11 @@ const Globals = createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    background-color: inherit;
+    border: none;
+  }
+
   html,
   body,
   div,
@@ -29,6 +34,7 @@ const Globals = createGlobalStyle`
   h4,
   h5,
   h6,
+  p,
   a,
   abbr,
   em,
