@@ -1,5 +1,6 @@
 import React from "react";
+import Text from "@/components/Text";
 
 export default function Home() {
-  return <h1>NS | Nerd Space</h1>;
+  return <Text.Default as="h1">NS | Nerd Space</Text.Default>;
 }
