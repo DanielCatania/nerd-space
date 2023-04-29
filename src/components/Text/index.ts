@@ -6,7 +6,7 @@ export const Small = styled.p`
   font-weight: 300;
 `;
 
-export const Default = styled.p`
+export const Text = styled.p`
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size["d"]};
 `;
@@ -23,11 +23,11 @@ export const ExtraLarge = styled.p`
   font-weight: 800;
 `;
 
-const Text = {
+export const Texts = {
   Small,
-  Default,
+  Default: Text,
   Large,
   ExtraLarge,
 };
 
-export default Text;
+export default Texts;
