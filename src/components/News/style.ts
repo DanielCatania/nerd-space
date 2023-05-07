@@ -10,6 +10,8 @@ const NewsStyle = styled.article`
     justify-content: center;
     align-items: center;
 
+    margin-bottom: 0.5em;
+
     img {
       max-width: 100%;
     }
