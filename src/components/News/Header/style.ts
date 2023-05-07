@@ -28,4 +28,10 @@ export const AuthorsStyle = styled.ul`
   max-width: 280px;
 `;
 
+export const BarStyle = styled.span`
+  width: 100%;
+
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary.dark};
+`;
+
 export default HeaderStyle;

@@ -4,7 +4,7 @@ import Texts from "@/components/patterns/Text";
 import Cover from "./Cover/";
 import Title from "./Title/";
 
-import HeaderStyle, { InfoStyle, AuthorsStyle } from "./style";
+import HeaderStyle, { InfoStyle, AuthorsStyle, BarStyle } from "./style";
 
 import Data from "../type";
 import Author from "./Author";
@@ -24,7 +24,7 @@ export default function Header(props: Data) {
           ))}
         </AuthorsStyle>
       </InfoStyle>
-      <hr />
+      <BarStyle />
     </HeaderStyle>
   );
 }
