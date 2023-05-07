@@ -21,6 +21,7 @@ const HeaderBox = styled.header`
   justify-content: center;
   width: 100%;
   height: 100px;
+  margin-bottom: 2em;
 
   background-color: ${({ theme }) => theme.colors.primary.default};
   color: ${({ theme }) => theme.colors.neutral.light};
