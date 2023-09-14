@@ -1,5 +1,11 @@
 import "styled-components";
 
+type breakpoints = {
+  xs: string;
+  md: string;
+  lg: string;
+};
+
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
@@ -19,10 +25,10 @@ declare module "styled-components" {
 
     font: {
       size: {
-        s: string;
-        d: string;
-        l: string;
-        xl: string;
+        s: breakpoints;
+        d: breakpoints;
+        l: breakpoints;
+        xl: breakpoints;
       };
       family: string;
     };

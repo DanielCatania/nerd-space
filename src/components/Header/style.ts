@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HeaderBox = styled.header`
   @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 
-  p {
+  h1 {
     font-family: "Orbitron", monospace;
     font-weight: 700;
     font-size: 64px;
@@ -71,13 +71,13 @@ const HeaderBox = styled.header`
   }
 
   @media screen and (max-width: 768px) {
-    p {
+    h1 {
       font-size: 48px;
       animation-name: blink-cursor, writing-medium;
     }
   }
   @media screen and (max-width: 450px) {
-    p {
+    h1 {
       font-size: 32px;
       animation-name: blink-cursor, writing-small;
     }

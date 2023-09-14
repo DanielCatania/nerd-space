@@ -18,10 +18,26 @@ const theme: DefaultTheme = {
   font: {
     family: "'Open Sans', sans-serif",
     size: {
-      s: "12px",
-      d: "16px",
-      l: "24px",
-      xl: "32px",
+      s: {
+        xs: "10px",
+        md: "12px",
+        lg: "14px",
+      },
+      d: {
+        xs: "14px",
+        md: "16px",
+        lg: "18px",
+      },
+      l: {
+        xs: "22px",
+        md: "24px",
+        lg: "26px",
+      },
+      xl: {
+        xs: "30px",
+        md: "32px",
+        lg: "34px",
+      },
     },
   },
   radius: "30px",
