@@ -1,18 +1,22 @@
-import Text from "@/components/Text";
-import { ResponseArticlesList } from "@/pages/api/articlesList";
 import React from "react";
+import { ResponseArticlesList } from "@/pages/api/articlesList";
+import { ArticleCover } from "./components/ArticleCover";
+import HomeScreenMain, { Articles } from "./style";
 
 export interface HomeScreenProps {
   data: ResponseArticlesList;
 }
 
-export default function HomeScreen(props: HomeScreenProps) {
+export default function HomeScreen({ data }: HomeScreenProps) {
+  const { articles } = data;
+
   return (
-    <>
-      <Text as="h1" size="xl">
-        Últimas notícias
-      </Text>
-      <pre>{JSON.stringify(props, null, 2)}</pre>
-    </>
+    <HomeScreenMain>
+      <Articles>
+        {articles.map((article) => (
+          <ArticleCover key={article.id} {...article} />
+        ))}
+      </Articles>
+    </HomeScreenMain>
   );
 }
