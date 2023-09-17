@@ -1,6 +1,10 @@
-import { ResponseArticle } from "@/api/routes/articles";
 import React from "react";
+import article from "@/types/articles";
 
-export default function ArticleScreen(props: ResponseArticle) {
+interface ArticleScreenProps {
+  article: article | {};
+}
+
+export default function ArticleScreen(props: ArticleScreenProps) {
   return <pre>{JSON.stringify(props, null, 2)}</pre>;
 }

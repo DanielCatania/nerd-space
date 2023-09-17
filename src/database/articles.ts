@@ -23,8 +23,7 @@ const ART_001: article = {
       title: "O que é o endereço IP?",
       text: [
         `O endereço IP é um identificador que qualquer máquina na rede precisa ter. Existem duas versões: o IPv4, que é um sistema numérico de 32 bits, e o IPv6, que é uma sequência de 128 bits, podendo conter números de 0 a 9, letras de A a F e separado com dois pontos a cada 4 dígitos. `,
-        `Exemplo de IPv4: 01.102.103.104. 
-        Exemplo de IPv6: 2001:db8:3333:4444:5555:6666:7777:8888`,
+        `Exemplo de IPv4: 01.102.103.104. \n Exemplo de IPv6: 2001:db8:3333:4444:5555:6666:7777:8888`,
         `Essas métricas são determinadas no protocolo TCP/IP, que é uma fusão de dois protocolos: o TCP, Transmission Control Protocol, ou em português, Protocolo de Controle de Transmissão, criado por Bob Kahn para solucionar o problema do antigo NCP, Network Control Protocol, ou em português, Protocolo de Controle de Rede, que não permitia fazer duas conexões ao mesmo tempo; e do protocolo IP, Internet Protocol, ou em português, Protocolo Internet, criado por Vint Cerf, justamente para identificar as máquinas. Antes da sua criação, o protocolo TCP tinha dificuldades em identificação quando ocorriam múltiplas conexões.`,
       ],
     },

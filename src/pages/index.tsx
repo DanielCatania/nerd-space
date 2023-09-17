@@ -1,8 +1,7 @@
 export { default } from "@/screens/HomeScreen/";
 
-export async function getServerSideProps() {
-  const res = await fetch(`${process.env["URL_API"]}/api/articlesList/`);
-  const data = await res.json();
+import articleList from "@/database/articlesList";
 
-  return { props: { data } };
+export async function getServerSideProps() {
+  return { props: { articles: articleList } };
 }

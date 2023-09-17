@@ -1,15 +1,13 @@
 import React from "react";
-import { ResponseArticlesList } from "@/pages/api/articlesList";
 import { ArticleCover } from "./components/ArticleCover";
 import HomeScreenMain, { Articles } from "./style";
+import { articleCover } from "@/types/articles";
 
 export interface HomeScreenProps {
-  data: ResponseArticlesList;
+  articles: articleCover[];
 }
 
-export default function HomeScreen({ data }: HomeScreenProps) {
-  const { articles } = data;
-
+export default function HomeScreen({ articles }: HomeScreenProps) {
   return (
     <HomeScreenMain>
       <Articles>

@@ -1,11 +1,18 @@
 export { default } from "@/screens/ArticleScreen";
 import type { GetServerSidePropsContext } from "next";
 
+import articles from "@/database/articles";
+
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const id = ctx.params?.id;
+  try {
+    const id = ctx.params?.id;
 
-  const res = await fetch(`${process.env["URL_API"]}/api/articles/${id}`);
-  const data = await res.json();
+    const article = articles.find((articleTested) => articleTested.id === id);
 
-  return { props: { data } };
+    if (!article) throw new Error("404");
+
+    return { props: { article } };
+  } catch {
+    return { props: { article: {} } };
+  }
 }
