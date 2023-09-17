@@ -13,6 +13,12 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
     return { props: { article } };
   } catch {
-    return { props: { article: {} } };
+    return {
+      props: {
+        article: {
+          id: "404",
+        },
+      },
+    };
   }
 }
