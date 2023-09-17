@@ -40,6 +40,7 @@ export const Content = styled.main`
 
 export const Image = styled.img`
   max-height: 80vh;
+  max-width: fit-content;
   width: 100%;
 
   display: block;
