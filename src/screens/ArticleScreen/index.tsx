@@ -3,8 +3,16 @@ import { useRouter } from "next/router";
 
 import article from "@/types/articles";
 
-import Text from "@/components/Text";
 import Author from "@/components/Author";
+import {
+  Main,
+  Content,
+  Cover,
+  CoverImage,
+  CoverInfo,
+  Image,
+  Text,
+} from "./style";
 
 interface ArticleScreenProps {
   article: article;
@@ -19,17 +27,20 @@ export default function ArticleScreen({ article }: ArticleScreenProps) {
   }
 
   return (
-    <main>
+    <Main>
       <article>
-        <header>
-          <img src={`/img/articles/${id}/cover.jpg`} alt={title} />
+        <Cover>
+          <CoverImage src={`/img/articles/${id}/cover.jpg`} alt={title} />
           <Text as="h1" size="xl">
             {title}
           </Text>
-          <Author {...author} />
-          <Text size="s">{date}</Text>
-        </header>
-        <main>
+          <CoverInfo>
+            <Author {...author} />
+            <Text size="s">{date}</Text>
+          </CoverInfo>
+          <hr />
+        </Cover>
+        <Content>
           {topics.map(({ text, image, title }, i) => (
             <div key={i}>
               {!title ? null : <Text size="l">{title}</Text>}
@@ -37,12 +48,12 @@ export default function ArticleScreen({ article }: ArticleScreenProps) {
                 <Text key={paragraph}>{paragraph}</Text>
               ))}
               {!image ? null : (
-                <img src={`/img/articles/${id}/${image}`} alt={title} />
+                <Image src={`/img/articles/${id}/${image}`} alt={title} />
               )}
             </div>
           ))}
-        </main>
+        </Content>
       </article>
-    </main>
+    </Main>
   );
 }
