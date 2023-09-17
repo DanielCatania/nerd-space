@@ -14,7 +14,8 @@ const ArticleBox = styled.article`
 
 export const ArticleImage = styled.img`
   max-height: 200px;
-  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 
   border-radius: ${({ theme }) => theme.radius};
 `;
