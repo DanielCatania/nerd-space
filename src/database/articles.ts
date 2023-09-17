@@ -13,7 +13,7 @@ const ART_001: article = {
   topics: [
     {
       title: "Como funciona debaixo do seu telefone?",
-      image: "/internet-path.png",
+      image: "internet-path.png",
       text: [
         `Você já parou para pensar como funciona por baixo do seu telefone? Como funciona quando você envia uma mensagem, usa as redes sociais ou faz uma pesquisa no Google? Isso é o que tentaremos responder durante o artigo: o que seu celular realmente envia e recebe, qual o caminho que a internet percorre e qual a magia por trás do que você vê na sua tela.`,
         `Vamos criar uma situação hipotética: você abre seu navegador, acessa o link https://nerd-space.vercel.app e vê uma página maravilhosa carregando com diversos artigos. Como isso ocorre? Ao colocar o link no seu navegador, ele envia uma requisição ao DNS, Domain Name System, ou em português, Sistema de Nomes de Domínio, que vai procurar o domínio do Nerd Space e retornar qual servidor ele está localizado. Ao ter em mãos o endereço IP do servidor, será requisitada uma versão do site. Que, por sua vez, o servidor vai fazer uma cópia dos arquivos do site, sendo esses arquivos em HTML, CSS e JavaScript. Com esses arquivos, o navegador os compila e mostra na sua tela o deslumbrante site do Nerd Space.`,
@@ -28,7 +28,7 @@ const ART_001: article = {
       ],
     },
     {
-      title: "As tecnologias que compõem o site",
+      title: "As tecnologias que compõem o site:",
       text: [
         `Os arquivos HTML, CSS e JavaScript são os que compõem o site, sendo responsáveis ​​por estruturar, estilizar e dar funcionalidade à aplicação. O HTML, HyperText Markup Language, ou em português, Linguagem de Marcação de Hipertexto, é o responsável pela estrutura do site. O CSS, Cascading Style Sheet, ou em português, Folhas de Estilo em Cascata, é o responsável pela estilização do site. O JavaScript, que curiosamente tem esse nome inspirado em Java por conta da popularização na época, usando como jogada de marketing, mas não existe relação real entre as linguagens, é a única linguagem de programação da aplicação e é responsável por dar funcionalidade ao site. Estas são as tecnologias base do Front-end, ou do client-side, são aquelas que são compiladas pelo navegador.`,
       ],
