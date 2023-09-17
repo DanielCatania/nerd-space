@@ -10,3 +10,13 @@ export interface Author {
   id: string;
   name: string;
 }
+
+interface article extends articleCover {
+  topics: {
+    title?: string;
+    text: string[];
+    image?: string;
+  }[];
+}
+
+export default article;
