@@ -63,6 +63,11 @@ const ART_001: article = {
         text: "Resultado do exemplo",
       },
     },
+    {
+      text: [
+        `Concluindo, seu telefone inicia o processo fazendo uma solicitação ao DNS, que retorna o IP, uma identificação do servidor. Com o IP, ele faz uma solicitação ao servidor, que retorna o site com os arquivos em HTML para a estrutura, CSS para o estilo e o JS para dar funcionalidade.`,
+      ],
+    },
   ],
 };
 
