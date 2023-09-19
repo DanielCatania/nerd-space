@@ -7,9 +7,10 @@ const ArticleBox = styled.article`
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
-  gap: 0.5em;
+  height: 500px;
 `;
 
 export const ArticleImage = styled.img`
