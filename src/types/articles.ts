@@ -16,6 +16,10 @@ interface article extends articleCover {
     title?: string;
     text: string[];
     image?: string;
+    link?: {
+      url: string;
+      text: string;
+    };
   }[];
 }
 

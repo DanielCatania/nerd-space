@@ -38,18 +38,30 @@ const ART_001: article = {
         `O HTML não é uma linguagem de programação, mas sim uma linguagem de marcação, pertencendo à mesma família do XML e do SVG. Sua principal função é estruturar a página, definindo, ou melhor, marcando, elementos como cabeçalhos, parágrafos, títulos, links, listas, etc. Essa marcação ocorre por meio de tags, etiquetas, que são abertas e fechadas com o conteúdo entre elas, por exemplo, a tag para definir parágrafos é <p>, e a tag para títulos principais é <h1>:`,
       ],
       image: "code-html.png",
+      link: {
+        url: "https://codepen.io/DanielCatania/pen/OJrWZGb",
+        text: "Resultado do exemplo",
+      },
     },
     {
       text: [
         `O CSS tem a função de controlar a aparência e apresentação de uma página. Ele é responsável por definir as cores, tamanhos, espaçamentos, fontes, animações, transições e etc. O termo “folhas em cascata” refere-se à maneira como o CSS lida com várias regras de estilo sobrepostas uma em cima da outra, onde se soma as regras escritas em um arquivo, ou folha, a regras escritas em outro arquivo. O CSS funciona através de definir propriedades nos elementos selecionados. Por exemplo, você quer aumentar o tamanho do texto e mudar a cor para azul do HTML acima:`,
       ],
       image: "code-css.png",
+      link: {
+        url: "https://codepen.io/DanielCatania/pen/WNLRJqZ",
+        text: "Resultado do exemplo",
+      },
     },
     {
       text: [
         `O JavaScript é uma linguagem de programação orientada a objetos que é principalmente executada no lado do cliente. Ele é responsável por fornecer funcionalidades para uma aplicação, como verificação de formulários, interações com campos e botões, manipulação de cookies, animações, manipulação do HTML e do CSS, conexões com APIs e etc. Como qualquer linguagem de programação, o JavaScript inclui variáveis, funções, classes, objetos, listas, etc. Em JavaScript, as variáveis podem ser declaradas usando 'let', o que permite que seus valores sejam alterados, ou 'const', que mantém o valor constante. As funções em JavaScript são definidas com a estrutura 'function nome(){ }'.`,
       ],
       image: "code-javascript.png",
+      link: {
+        url: "https://codepen.io/DanielCatania/pen/YzdNvzy",
+        text: "Resultado do exemplo",
+      },
     },
   ],
 };

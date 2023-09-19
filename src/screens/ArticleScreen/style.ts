@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import BaseText from "@/components/Text";
+import NextLink from "next/link";
 
 export const Main = styled.main`
   margin: 0 5%;
@@ -30,6 +31,11 @@ export const CoverInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const Link = styled(NextLink)`
+  color: blue;
+  text-decoration: underline;
 `;
 
 export const Content = styled.main`

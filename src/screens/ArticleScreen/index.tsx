@@ -12,6 +12,7 @@ import {
   CoverInfo,
   Image,
   Text,
+  Link,
 } from "./style";
 
 interface ArticleScreenProps {
@@ -41,14 +42,23 @@ export default function ArticleScreen({ article }: ArticleScreenProps) {
           <hr />
         </Cover>
         <Content>
-          {topics.map(({ text, image, title }, i) => (
+          {topics.map(({ text, image, title, link }, i) => (
             <div key={i}>
-              {!title ? null : <Text size="l">{title}</Text>}
+              {!title ? null : (
+                <Text as="h3" size="l">
+                  {title}
+                </Text>
+              )}
               {text.map((paragraph) => (
                 <Text key={paragraph}>{paragraph}</Text>
               ))}
               {!image ? null : (
                 <Image src={`/img/articles/${id}/${image}`} alt={title} />
+              )}
+              {!link ? null : (
+                <Link href={link.url} target="_blank">
+                  {link.text}
+                </Link>
               )}
             </div>
           ))}
