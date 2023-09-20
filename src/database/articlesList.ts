@@ -1,17 +1,7 @@
 import { articleCover } from "@/types/articles";
+import { ART_001_Header } from "./articles/ART_001";
 
 const articleList: articleCover[] = [
-  {
-    id: "ART_001",
-    title: "Como funciona por debaixo do seu telefone?",
-    description:
-      "Você já parou para pensar como funciona por baixo do seu telefone? Como funciona quando você envia uma mensagem, usa as redes sociais ou faz uma pesquisa no Google? Como tudo isso funciona? ",
-    date: "14/09/2023",
-    author: {
-      name: "Daniel Catania",
-      id: "AUT_01",
-    },
-  },
   {
     id: "ART_002",
     title: "Como se manter seguro na internet?",
@@ -23,6 +13,7 @@ const articleList: articleCover[] = [
       id: "AUT_01",
     },
   },
+  ART_001_Header,
 ];
 
 export default articleList;
