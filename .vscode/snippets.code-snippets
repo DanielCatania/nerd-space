@@ -1,0 +1,34 @@
+{
+  "create article folder": {
+    "scope": "typescript",
+    "prefix": "artfol",
+    "body": [
+      "import article, { articleCover } from '@/types/articles';\n",
+      "export const ART_000_Header: articleCover = {",
+      "id:'ART_000',",
+      "title:'',",
+      "description:'',",
+      "author: {",
+      " id:'AUT_00',",
+      " name:'',",
+      "},",
+      "date:'00/00/0000',",
+      "};\n",
+      "const ART_000: article = {",
+      "...ART_000_Header,",
+      "topics: [",
+      "{",
+      "title:'',",
+      "image:'',",
+      "text: [],",
+      "link: {",
+      " text:'',",
+      " url:'',",
+      "},",
+      "},",
+      "],",
+      "}; \n",
+      "export default ART_000;"
+    ]
+  }
+}
