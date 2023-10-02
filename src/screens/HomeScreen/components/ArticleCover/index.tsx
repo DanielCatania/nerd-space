@@ -16,7 +16,7 @@ export function ArticleCover({
     <Link href={`/articles/${id}`}>
       <ArticleBox>
         <ArticleImage src={`/img/articles/${id}/cover.jpg`} alt={title} />
-        <Text size="l" as="h2">
+        <Text size="l" as="h3">
           {title}
         </Text>
         <Text as="p">{description}</Text>

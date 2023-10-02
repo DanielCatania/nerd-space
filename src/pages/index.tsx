@@ -1,7 +1,16 @@
 export { default } from "@/screens/HomeScreen/";
+import { HomeProps } from "@/screens/HomeScreen/";
 
-import articleList from "@/database/articlesList";
+import database from "@/database";
 
 export async function getServerSideProps() {
-  return { props: { articles: articleList } };
+  const articles = database.articleList;
+  const highlighted = articles.shift() || articles[0];
+
+  const props: HomeProps = {
+    articles,
+    highlighted,
+  };
+
+  return { props };
 }
