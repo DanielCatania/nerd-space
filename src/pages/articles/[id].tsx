@@ -1,10 +1,11 @@
 export { default } from "@/screens/ArticleScreen";
 import type { GetServerSidePropsContext } from "next";
 
-import articles from "@/database/articles";
+import database from "@/database";
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   try {
+    const { articles } = database;
     const id = ctx.params?.id;
 
     const article = articles.find((articleTested) => articleTested.id === id);
