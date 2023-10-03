@@ -13,12 +13,13 @@ const Box = styled.article`
 
   @media screen and (max-width: 600px) {
     grid-template-columns: 100%;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 300px 200px;
+    height: 500px;
   }
 `;
 
 export const Content = styled.div`
-  padding: 0.5em;
+  padding: 1em 0.5em;
 
   display: flex;
   flex-direction: column;
