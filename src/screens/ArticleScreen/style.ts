@@ -52,3 +52,10 @@ export const Image = styled.img`
   display: block;
   margin: 0 auto;
 `;
+
+export const ReadToo = styled.section`
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+`;

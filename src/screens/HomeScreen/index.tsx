@@ -2,11 +2,12 @@ import React from "react";
 
 import { articleCover } from "@/types/articles";
 
-import Main, { Articles } from "./style";
+import Main from "./style";
 
-import { ArticleCover } from "./components/ArticleCover";
+import { ArticleCover } from "../../components/ArticleCover";
 import Highlihted from "./components/Highlighted";
-import Title from "./components/Title";
+import Title from "../../components/Title";
+import ArticlesGrid from "@/components/ArticlesGrid";
 
 export interface HomeProps {
   articles: articleCover[];
@@ -19,11 +20,11 @@ export default function HomeScreen({ articles, highlighted }: HomeProps) {
       <Title>Destaque</Title>
       <Highlihted {...highlighted} />
       <Title>Últimos artigos</Title>
-      <Articles>
+      <ArticlesGrid>
         {articles.map((article) => (
           <ArticleCover key={article.id} {...article} />
         ))}
-      </Articles>
+      </ArticlesGrid>
     </Main>
   );
 }

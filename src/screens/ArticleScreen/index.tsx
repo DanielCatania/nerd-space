@@ -1,7 +1,6 @@
 import React from "react";
-import { useRouter } from "next/router";
 
-import article from "@/types/articles";
+import article, { articleCover } from "@/types/articles";
 
 import Author from "@/components/Author";
 import {
@@ -13,19 +12,19 @@ import {
   Image,
   Text,
   Link,
+  ReadToo,
 } from "./style";
+import Title from "@/components/Title";
+import { ArticleCover } from "@/components/ArticleCover";
+import ArticlesGrid from "@/components/ArticlesGrid";
 
-interface ArticleScreenProps {
+export interface ArticleProps {
   article: article;
+  readToo: articleCover[] | [];
 }
 
-export default function ArticleScreen({ article }: ArticleScreenProps) {
+export default function ArticleScreen({ article, readToo }: ArticleProps) {
   const { id, title, author, date, topics } = article;
-
-  const router = useRouter();
-  if (id === "404") {
-    router.push("/404");
-  }
 
   return (
     <Main>
@@ -64,6 +63,14 @@ export default function ArticleScreen({ article }: ArticleScreenProps) {
           ))}
         </Content>
       </article>
+      <ReadToo>
+        <Title>Leia também</Title>
+        <ArticlesGrid>
+          {readToo.map((article, i) => (
+            <ArticleCover key={i} {...article} />
+          ))}
+        </ArticlesGrid>
+      </ReadToo>
     </Main>
   );
 }

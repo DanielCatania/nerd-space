@@ -9,8 +9,6 @@ export async function getServerSideProps() {
   const highlighted = data.articleList[0];
   const articles = data.articleList.splice(1);
 
-  console.log(highlighted, articles);
-
   const props: HomeProps = {
     articles,
     highlighted,
