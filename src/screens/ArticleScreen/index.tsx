@@ -17,6 +17,7 @@ import {
 import Title from "@/components/Title";
 import { ArticleCover } from "@/components/ArticleCover";
 import ArticlesGrid from "@/components/ArticlesGrid";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 export interface ArticleProps {
   article: article;
@@ -25,9 +26,14 @@ export interface ArticleProps {
 
 export default function ArticleScreen({ article, readToo }: ArticleProps) {
   const { id, title, author, date, topics } = article;
+  const [access, setAccess] = useLocalStorage("access", "false");
 
   return (
     <Main>
+      <pre>{JSON.stringify({ access }, null, 2)}</pre>
+      <button onClick={() => setAccess(access === "false" ? "true" : "false")}>
+        change
+      </button>
       <article>
         <Cover>
           <CoverImage src={`/img/articles/${id}/cover.jpg`} alt={title} />
