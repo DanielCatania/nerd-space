@@ -13,6 +13,8 @@ import {
   Text,
   Link,
   ReadToo,
+  SignatureBanner,
+  Sign,
 } from "./style";
 import Title from "@/components/Title";
 import { ArticleCover } from "@/components/ArticleCover";
@@ -30,10 +32,6 @@ export default function ArticleScreen({ article, readToo }: ArticleProps) {
 
   return (
     <Main>
-      <pre>{JSON.stringify({ access }, null, 2)}</pre>
-      <button onClick={() => setAccess(access === "false" ? "true" : "false")}>
-        change
-      </button>
       <article>
         <Cover>
           <CoverImage src={`/img/articles/${id}/cover.jpg`} alt={title} />
@@ -47,26 +45,63 @@ export default function ArticleScreen({ article, readToo }: ArticleProps) {
           <hr />
         </Cover>
         <Content>
-          {topics.map(({ text, image, title, link }, i) => (
-            <div key={i}>
-              {!title ? null : (
-                <Text as="h3" size="l">
-                  {title}
-                </Text>
-              )}
-              {text.map((paragraph) => (
-                <Text key={paragraph}>{paragraph}</Text>
-              ))}
-              {!image ? null : (
-                <Image src={`/img/articles/${id}/${image}`} alt={title} />
-              )}
-              {!link ? null : (
-                <Link href={link.url} target="_blank">
-                  {link.text}
-                </Link>
-              )}
-            </div>
-          ))}
+          {access === "true" ? (
+            topics.map(({ text, image, title, link }, i) => (
+              <div key={i}>
+                {!title ? null : (
+                  <Text as="h3" size="l">
+                    {title}
+                  </Text>
+                )}
+                {text.map((paragraph) => (
+                  <Text key={paragraph}>{paragraph}</Text>
+                ))}
+                {!image ? null : (
+                  <Image src={`/img/articles/${id}/${image}`} alt={title} />
+                )}
+                {!link ? null : (
+                  <Link href={link.url} target="_blank">
+                    {link.text}
+                  </Link>
+                )}
+              </div>
+            ))
+          ) : (
+            <>
+              <div>
+                {!topics[0].title ? null : (
+                  <Text as="h3" size="l">
+                    {title}
+                  </Text>
+                )}
+                {topics[0].text.map((paragraph) => (
+                  <Text key={paragraph}>{paragraph}</Text>
+                ))}
+                {!topics[0].image ? null : (
+                  <Image
+                    src={`/img/articles/${id}/${topics[0].image}`}
+                    alt={topics[0].title}
+                  />
+                )}
+                {!topics[0].link ? null : (
+                  <Link href={topics[0].link.url} target="_blank">
+                    {topics[0].link.text}
+                  </Link>
+                )}
+              </div>
+              <SignatureBanner>
+                <Title>Assine agora para ler!</Title>
+                <Text size="l">R$9.90 p/mês</Text>
+                <Sign
+                  onClick={() =>
+                    setAccess(access === "false" ? "true" : "false")
+                  }
+                >
+                  <Text size="xl">Iniciar teste grátis!</Text>
+                </Sign>
+              </SignatureBanner>
+            </>
+          )}
         </Content>
       </article>
       <ReadToo>

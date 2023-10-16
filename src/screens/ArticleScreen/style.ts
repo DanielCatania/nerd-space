@@ -59,3 +59,25 @@ export const ReadToo = styled.section`
   flex-direction: column;
   gap: 1em;
 `;
+
+export const SignatureBanner = styled.section`
+  max-width: 500px;
+  width: 100%;
+
+  padding: 1em;
+  border: 1px solid black;
+
+  margin: 2em auto;
+  background-color: #f5f5f5;
+`;
+
+export const Sign = styled.button`
+  background-color: ${({ theme }) => theme.colors.primary.default};
+  color: #fff;
+
+  border-radius: 15px;
+  margin-top: 2em;
+  padding: 0 1em;
+
+  cursor: pointer;
+`;
