@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ArticlesGrid = styled.div`
   display: grid;
-  gap: 3%;
+  gap: 1em;
   width: 100%;
 
   @media screen and (min-width: 0px) {

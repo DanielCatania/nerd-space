@@ -1,5 +1,8 @@
 import React from "react";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 import { articleCover } from "@/types/articles";
 
 import Main from "./style";
@@ -16,15 +19,19 @@ export interface HomeProps {
 
 export default function HomeScreen({ articles, highlighted }: HomeProps) {
   return (
-    <Main>
-      <Title>Destaque</Title>
-      <Highlihted {...highlighted} />
-      <Title>Últimos artigos</Title>
-      <ArticlesGrid>
-        {articles.map((article) => (
-          <ArticleCover key={article.id} {...article} />
-        ))}
-      </ArticlesGrid>
-    </Main>
+    <>
+      <Header />
+      <Main>
+        <Title>Destaque</Title>
+        <Highlihted {...highlighted} />
+        <Title>Últimos artigos</Title>
+        <ArticlesGrid>
+          {articles.map((article) => (
+            <ArticleCover key={article.id} {...article} />
+          ))}
+        </ArticlesGrid>
+      </Main>
+      <Footer />
+    </>
   );
 }
