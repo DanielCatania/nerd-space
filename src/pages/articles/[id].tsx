@@ -20,7 +20,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
     const articleList: articleCover[] = data.articleList;
     const readToo: articleCover[] = [];
-    for (let i = 0; readToo.length < 2; i++) {
+    for (let i = 0; readToo.length < 3; i++) {
       articleList[i].id !== id ? readToo.push(articleList[i]) : null;
     }
 
