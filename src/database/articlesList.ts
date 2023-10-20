@@ -5,9 +5,11 @@ import { ART_003_Header } from "./articles/ART_003";
 import { ART_004_Header } from "./articles/ART_004";
 import { ART_005_Header } from "./articles/ART_005";
 import { ART_006_Header } from "./articles/ART_006";
+import { ART_007_Header } from "./articles/ART_007";
 
 const articleList: articleCover[] = [
   ART_001_Header,
+  ART_007_Header,
   ART_006_Header,
   ART_005_Header,
   ART_004_Header,
