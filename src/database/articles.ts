@@ -6,8 +6,10 @@ import ART_004 from "./articles/ART_004";
 import ART_005 from "./articles/ART_005";
 import ART_006 from "./articles/ART_006";
 import ART_007 from "./articles/ART_007";
+import ART_008 from "./articles/ART_008";
 
 const articles: article[] = [
+  ART_008,
   ART_007,
   ART_006,
   ART_005,
