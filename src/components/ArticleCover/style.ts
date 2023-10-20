@@ -3,7 +3,8 @@ import styled from "styled-components";
 const ArticleBox = styled.article`
   border-radius: ${({ theme }) => theme.radius};
   border: 2px solid #ccc;
-  padding: 5%;
+  padding: 3% 5%;
+  gap: 5px;
 
   display: flex;
   flex-direction: column;
