@@ -12,6 +12,12 @@ export const Text = styled(BaseText)`
 
 export const Cover = styled.header`
   margin-bottom: 2em;
+
+  hr {
+    background-color: #ccc;
+    height: 1px;
+    margin-top: 3px;
+  }
 `;
 
 export const CoverImage = styled.img`
